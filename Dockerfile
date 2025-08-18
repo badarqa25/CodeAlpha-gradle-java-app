@@ -7,8 +7,8 @@ COPY . .
 # Build the jar inside the container
 RUN ./gradlew build --no-daemon
 
-# Copy the built jar
-COPY build/libs/*.jar app.jar
+# Copy the built jar from the correct location
+RUN cp app/build/libs/*.jar app.jar
 
 CMD ["java", "-jar", "app.jar"]
 
