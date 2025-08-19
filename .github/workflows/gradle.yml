@@ -35,7 +35,7 @@ jobs:
         docker tag gradle-java-app ${{ secrets.DOCKER_USERNAME }}/gradle-java-app:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/gradle-java-app:latest
         
-#Connection to your VM Ubuntu
+#Connection to your VM Ubuntu .....
     - name: Deploy to Ubuntu VM
       uses: appleboy/ssh-action@v1.0.0
       with:
